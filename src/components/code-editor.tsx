@@ -61,7 +61,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ onChange, initialValue }) => {
         value={initialValue}
         language="javascript"
         theme="dark"
-        height="400px"
+        height="100%"
         options={{
           wordWrap: 'on',
           minimap: { enabled: false },
