@@ -6,7 +6,8 @@ interface PreviewProps {
 
 const html = `
     <html>
-      <head></head>
+      <head>
+      </head>
       <body>
         <div id="root"></div>
         <script>
@@ -34,8 +35,13 @@ const Preview: React.FC<PreviewProps> = ({ code }) => {
     iframe.current.contentWindow.postMessage(code, '*');
   }, [code]);
   return (
-    <div className="preview-wrapper">
-      <iframe title="code preview" ref={iframe} sandbox="allow-scripts" srcDoc={html} />
+    <div className='preview-wrapper'>
+      <iframe
+        title='code preview'
+        ref={iframe}
+        sandbox='allow-scripts'
+        srcDoc={html}
+      />
     </div>
   );
 };

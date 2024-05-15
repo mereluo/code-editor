@@ -1,11 +1,14 @@
 .preview-wrapper {
   position: relative;
   height: 100%;
+  flex-grow: 1;
 }
 
 .preview-wrapper iframe {
   height: 100%;
+  width: 100%;
   background-color: white;
+  display: block;
 }
 
 /*fix the draggable glitch inside the preview*/

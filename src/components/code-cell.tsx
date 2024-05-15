@@ -6,7 +6,7 @@ import Resizable from './resizable';
 
 const CodeCell = () => {
   const [code, setCode] = useState('');
-  const [input, setInut] = useState('');
+  const [input, setInput] = useState('');
 
   const onClick = async () => {
     const output = await bundle(input);
@@ -14,9 +14,14 @@ const CodeCell = () => {
   };
 
   return (
-    <Resizable direction="vertical">
+    <Resizable direction='vertical'>
       <div style={{ height: '100%', display: 'flex', flexDirection: 'row' }}>
-        <CodeEditor initialValue="const a = 1;" onChange={(value) => setInut(value)} />
+        <Resizable direction='horizontal'>
+          <CodeEditor
+            initialValue='const a = 1;'
+            onChange={(value) => setInput(value)}
+          />
+        </Resizable>
         <Preview code={code} />
       </div>
     </Resizable>
